@@ -1,4 +1,4 @@
-# Ethereal_Sanya — simple Flask landing site
+# simple Flask landing site
 
 This is a small Flask app (learning project) that serves a static landing page and a couple of starter routes.
 
