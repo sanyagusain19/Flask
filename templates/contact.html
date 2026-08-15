@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact — Ethereal_Sanya ✨</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+        <h2>⋆ Ethereal_Sanya</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="left">
+            <h1>Contact</h1>
+            <p class="subtitle">Send a message. This form is a simple frontend demo and does not store messages.</p>
+
+            {% if sent %}
+                <p style="margin-top:20px; font-weight:600;">Thanks, {{ name or 'friend' }} — your message was received (demo).</p>
+            {% else %}
+                <form method="post" action="/contact">
+                    <p><input name="name" placeholder="Your name" required style="padding:10px; width:100%; border-radius:8px; border:1px solid #eaeaea"></p>
+                    <p><input name="email" placeholder="Email" type="email" required style="padding:10px; width:100%; border-radius:8px; border:1px solid #eaeaea"></p>
+                    <p><textarea name="message" placeholder="Message" rows="4" style="padding:10px; width:100%; border-radius:8px; border:1px solid #eaeaea"></textarea></p>
+                    <p><button type="submit" class="primary">Send</button></p>
+                </form>
+            {% endif %}
+
+        </div>
+        <div class="right">
+            <div class="glass">
+                <h3>Contact</h3>
+                <p>Prefer email? Try: <strong>your-email@example.com</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with 💜 by <strong>Sanya</strong></p>
+    </footer>
+
+</body>
+
+</html>
